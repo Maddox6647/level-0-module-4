@@ -38,6 +38,7 @@ if __name__ == '__main__':
     if square and red == True:
         turtley_turtle = turtle.Turtle()
         for i in range(4):
+            turtley_turtle.pencolor('red')
             turtley_turtle.forward(169)
             turtley_turtle.right(90)
 
