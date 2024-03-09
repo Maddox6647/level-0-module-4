@@ -18,23 +18,22 @@ if __name__ == '__main__':
     print(pi[1])
     print(pi[2])
     # TODO) Use a while loop to keep asking for the next digit of pi
-    pinum = ''
-    while pinum == "" or pinum is None:
-        pinum = simpledialog.askinteger(None, prompt="enter fourth digit of pi")
-    if pinum == 4:
-        messagebox.showinfo(None, "correct ")
-        print(str(pinum))
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        break
-    else:
-        print('wrong')
+    counter = 0
+    while True:
+        pinum = simpledialog.askstring(None, prompt="enter next digit of pi")
+        if pinum == pi[counter]:
+            counter += 1
+            print("correct")
+        else:
+            print('wrong')
+            break
 
 
+
+    # TODO) Print out how many digits of pi the user was able to recite
+    #  in a row
 
 
 
         # TODO) If they are correct, print "correct".
         #  If they are not, print "incorrect" and break out of the while loop
-
-
-    # TODO) Print out how many digits of pi the user was able to recite
-    #  in a row
