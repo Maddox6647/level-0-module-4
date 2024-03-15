@@ -37,8 +37,47 @@ if __name__ == '__main__':
     money_in_dollars = 3.00
 
     # TODO) Write a while loop that ends when you have no money left
-    while money_in_dollars <= 0:
-    else:
+    while money_in_dollars >= 0:
+        vend = simpledialog.askstring(title='shrek', prompt='what would you like to buy')
+
+        if vend == 'soda':
+            money_in_dollars -= 1
+            print(money_in_dollars)
+            if money_in_dollars == 0:
+                messagebox.showinfo(None, message='good job! u maximized ur money!!!')
+            elif money_in_dollars <= 0:
+                messagebox.showinfo(None, message='u overspent dum dum!!!')
+
+
+        elif vend == 'candy bar':
+            money_in_dollars -= 1.5
+            print(money_in_dollars)
+            if money_in_dollars == 0:
+                messagebox.showinfo(None, message='good job! u maximized ur money!!!')
+            elif money_in_dollars <= 0:
+                messagebox.showinfo(None, message='u overspent dum dum!!!')
+
+
+        elif vend == 'pretzels':
+            money_in_dollars -= 1
+            print(money_in_dollars)
+            if money_in_dollars == 0:
+                messagebox.showinfo(None, message='good job! u maximized ur money!!!')
+            elif money_in_dollars <= 0:
+                messagebox.showinfo(None, message='u overspent dum dum!!!')
+
+        elif vend == 'water':
+            money_in_dollars -= .5
+            print(money_in_dollars)
+            if money_in_dollars == 0:
+                messagebox.showinfo(None, message='good job! u maximized ur money!!!')
+            elif money_in_dollars <= 0:
+                messagebox.showinfo(None, message='u overspent dum dum!!!')
+        else:
+            print('not valid')
+            break
+        if vend == 'exit':
+            break
 
         # TODO) Call the vending_machine() function and save the money spent
         #  in a variable, for example:
